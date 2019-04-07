@@ -5,7 +5,6 @@ import javax.swing.JOptionPane;
 
 public class AsciidocSwingDemoCtrl {
     
-    private JFrame parent;
     private StringFetcher nameFetcher;
     
     private final static String DEFAULT_NAME = "Mysterious Stranger";
@@ -13,27 +12,19 @@ public class AsciidocSwingDemoCtrl {
     /**
      * Controller Methods.
      */
-    /**
-     * Set the parent frame element.
-     * 
-     * @param parent 
-     */
-    public void setParent(JFrame parent) {
-        this.parent = parent;
-    }
     
     /**
      * Show the greeting.
      */
-    public void sayHello() {
-        JOptionPane.showMessageDialog(parent, "Hello, " + getName() + "!");
+    public String sayHello() {
+        return "Hello, " + getName() + "!";
     }
     
     /**
      * Show the help message.
      */
-    public void showHelp() {
-        JOptionPane.showMessageDialog(parent, "I Help Those who Help Themselves");
+    public String showHelp() {
+        return "I Help Those who Help Themselves!";
     }
     
     /**

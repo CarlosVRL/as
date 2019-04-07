@@ -19,7 +19,6 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
     }
     
     private void initCtrl() {
-        ctrl.setParent(this);
         ctrl.setNameFetcher(new StringFetcher() {
             @Override
             public String fetch() {
@@ -99,11 +98,11 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sayHelloBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sayHelloBtnActionPerformed
-        ctrl.sayHello();
+        JOptionPane.showMessageDialog(this, ctrl.sayHello());
     }//GEN-LAST:event_sayHelloBtnActionPerformed
 
     private void showHelpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showHelpBtnActionPerformed
-        ctrl.showHelp();
+        JOptionPane.showMessageDialog(this, ctrl.showHelp());
     }//GEN-LAST:event_showHelpBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
