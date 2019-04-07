@@ -10,9 +10,11 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        final AsciidocSwingDemoCtrl asciidocSwingDemoCtrl = new AsciidocSwingDemoCtrl();
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AsciidocSwingDemo().setVisible(true);
+                new AsciidocSwingDemo(asciidocSwingDemoCtrl).setVisible(true);
             }
         });
     }

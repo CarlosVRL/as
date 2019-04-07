@@ -3,16 +3,19 @@ package codinginfire;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Carlos
+ * An AsciidocSwingDemo Panel.
  */
 public class AsciidocSwingDemo extends javax.swing.JFrame {
 
+    private final AsciidocSwingDemoCtrl ctrl;
+    
     /**
      * Creates new form AsciidocSwingDemo
      */
-    public AsciidocSwingDemo() {
+    public AsciidocSwingDemo(AsciidocSwingDemoCtrl ctrl) {
         initComponents();
+        this.ctrl = ctrl;
+        ctrl.setParent(this);
     }
 
     /**
@@ -32,12 +35,6 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         nameLbl.setText("Name:");
-
-        nameTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameTxtActionPerformed(evt);
-            }
-        });
 
         sayHelloBtn.setText("Say Hello");
         sayHelloBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -91,23 +88,13 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTxtActionPerformed
-
     private void sayHelloBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sayHelloBtnActionPerformed
-        JOptionPane.showMessageDialog(this, "Hello, " + getNameFromText() + "!");
+        ctrl.sayHello();
     }//GEN-LAST:event_sayHelloBtnActionPerformed
 
     private void showHelpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showHelpBtnActionPerformed
-        JOptionPane.showMessageDialog(this, "I Help Those who Help Themselves");
+        ctrl.showHelp();
     }//GEN-LAST:event_showHelpBtnActionPerformed
-
-    private String getNameFromText() {
-        String name = this.nameTxt.getText();
-        if (name == null || "".equals(name)) { return "Mysterious Stranger"; }
-        return name;
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel nameLbl;
