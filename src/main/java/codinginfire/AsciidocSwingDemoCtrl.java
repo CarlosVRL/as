@@ -44,7 +44,7 @@ public class AsciidocSwingDemoCtrl {
      */
     private String getName() {
         String name = nameFetcher.fetch();
-        if (name == null || "".equals(name)) { return DEFAULT_NAME; }
+        if (name == null || "".equals(name.trim())) { return DEFAULT_NAME; }
         return name.trim();
     }
 }
