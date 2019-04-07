@@ -1,8 +1,5 @@
 package codinginfire;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-
 public class AsciidocSwingDemoCtrl {
     
     private StringFetcher nameFetcher;
@@ -14,14 +11,18 @@ public class AsciidocSwingDemoCtrl {
      */
     
     /**
-     * Show the greeting.
+     * Say a greeting.
+     * 
+     * @return the greeting
      */
     public String sayHello() {
         return "Hello, " + getName() + "!";
     }
     
     /**
-     * Show the help message.
+     * Say a help message.
+     * 
+     * @return the help message
      */
     public String showHelp() {
         return "I Help Those who Help Themselves!";
