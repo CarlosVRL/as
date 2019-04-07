@@ -15,11 +15,14 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
     public AsciidocSwingDemo(AsciidocSwingDemoCtrl ctrl) {
         initComponents();
         this.ctrl = ctrl;
+        initCtrl();
+    }
+    
+    private void initCtrl() {
         ctrl.setParent(this);
-        
-        ctrl.setNameListener(new StringListener() {
+        ctrl.setNameFetcher(new StringFetcher() {
             @Override
-            public String stringEmitted() {
+            public String fetch() {
                 return nameTxt.getText();
             }
         });
