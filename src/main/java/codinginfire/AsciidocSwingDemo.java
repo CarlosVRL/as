@@ -16,6 +16,13 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
         initComponents();
         this.ctrl = ctrl;
         ctrl.setParent(this);
+        
+        ctrl.setNameListener(new StringListener() {
+            @Override
+            public String stringEmitted() {
+                return nameTxt.getText();
+            }
+        });
     }
 
     /**

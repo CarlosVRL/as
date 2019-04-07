@@ -6,23 +6,29 @@ import javax.swing.JOptionPane;
 public class AsciidocSwingDemoCtrl {
     
     private JFrame parent;
+    private StringListener nameListener;
+    
+    private final static String DEFAULT_NAME = "Mysterious Stranger";
 
     public void setParent(JFrame parent) {
         this.parent = parent;
     }
     
     public void sayHello() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        //JOptionPane.showMessageDialog(this, "Hello, " + getNameFromText() + "!");
+        JOptionPane.showMessageDialog(parent, "Hello, " + getName() + "!");
     }
     
     public void showHelp() {
         JOptionPane.showMessageDialog(parent, "I Help Those who Help Themselves");
     }
     
-//    private String getNameFromText() {
-//        String name = this.nameTxt.getText();
-//        if (name == null || "".equals(name)) { return "Mysterious Stranger"; }
-//        return name;
-//    }
+    void setNameListener(StringListener nameListener) {
+        this.nameListener = nameListener;
+    }
+    
+    private String getName() {
+        String name = nameListener.stringEmitted();
+        if (name == null || "".equals(name)) { return DEFAULT_NAME; }
+        return name.trim();
+    }
 }
