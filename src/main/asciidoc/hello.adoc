@@ -1,0 +1,20 @@
+= Asciidoctor Demo
+
+
+This is a demonstration of asciidoc-based documentation that has been injected into a JavaFX Application.
+
+== Hello Panel
+
+=== Inputs
+
+* First Name [Optional]
+
+* Last Name [Optional]
+
+=== Usage
+
+Enter your first and last name in the fields to generate a greeting message.
+
+=== Defaults
+
+When no inputs are provided, the message will refer to a `Mysterious Stranger`.
