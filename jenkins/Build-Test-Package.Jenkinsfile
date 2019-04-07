@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    tools {
+        maven 'apache-maven-3.0.1'
+    }
     stages {
         stage('Build') {
             steps {
-                bat "mvn clean package -DskipTests=true"
+                sh "mvn clean package -DskipTests=true"
             }
         }
     }
