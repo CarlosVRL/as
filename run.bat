@@ -1,0 +1,1 @@
+java -cp target/asciidoc-for-javaswing-demo-1.0-SNAPSHOT.jar codinginfire.App
