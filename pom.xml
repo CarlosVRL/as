@@ -36,7 +36,7 @@
         <version>1.5.8</version>
         <executions>
           <execution>
-            <id>output-html</id>
+            <id>output-asciidoc</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>process-asciidoc</goal>
