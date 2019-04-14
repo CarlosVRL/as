@@ -13,5 +13,7 @@ mvn package
 Run using the batch script
 
 ```
-./run.bat
+run.bat
 ```
+
+Enter your name to `Say Hello`, or `Show Help` if you are stuck!
