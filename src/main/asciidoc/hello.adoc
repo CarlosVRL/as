@@ -1,9 +1,8 @@
 = Asciidoctor Demo
 
-
-This is a demonstration of asciidoc-based documentation that has been injected into a JavaFX Application.
-
 == Hello Panel
+
+This is an example of Asciidoc documentation that has been injected into a Java Swing Application.
 
 === Inputs
 
