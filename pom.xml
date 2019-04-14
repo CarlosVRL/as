@@ -47,11 +47,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.asciidoctor</groupId>
-        <artifactId>asciidoctor-maven-plugin</artifactId>
-        <version>1.5.5</version>
         <dependencies>
           <dependency>
             <groupId>org.asciidoctor</groupId>
