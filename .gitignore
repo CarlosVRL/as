@@ -2,4 +2,4 @@
 target
 
 # Documentation
-src/main/resources/*.pdf
+doc/*.pdf
