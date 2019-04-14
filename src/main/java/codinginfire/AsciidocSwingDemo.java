@@ -1,6 +1,6 @@
 package codinginfire;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  * An AsciidocSwingDemo Panel.
@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 public class AsciidocSwingDemo extends javax.swing.JFrame {
 
     private final AsciidocSwingDemoCtrl ctrl;
-    
+
     /**
      * Creates new form AsciidocSwingDemo
      */
@@ -17,7 +17,7 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
         this.ctrl = ctrl;
         initCtrl();
     }
-    
+
     private void initCtrl() {
         ctrl.setNameFetcher(new StringFetcher() {
             @Override
@@ -102,7 +102,7 @@ public class AsciidocSwingDemo extends javax.swing.JFrame {
     }//GEN-LAST:event_sayHelloBtnActionPerformed
 
     private void showHelpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showHelpBtnActionPerformed
-        JOptionPane.showMessageDialog(this, ctrl.showHelp());
+        ctrl.showHelp();
     }//GEN-LAST:event_showHelpBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,10 +1,14 @@
 package codinginfire;
 
+import java.awt.*;
+import java.io.File;
+
 public class AsciidocSwingDemoCtrl {
     
     private StringFetcher nameFetcher;
     
     private final static String DEFAULT_NAME = "Mysterious Stranger";
+    private final static String HELP_URL = "/hello.pdf";
 
     /**
      * Controller Methods.
@@ -20,12 +24,12 @@ public class AsciidocSwingDemoCtrl {
     }
     
     /**
-     * Say a help message.
+     * Show a help message.
      * 
      * @return the help message
      */
-    public String showHelp() {
-        return "I Help Those who Help Themselves!";
+    public void showHelp() {
+        openDocument(HELP_URL);
     }
     
     /**
@@ -36,7 +40,7 @@ public class AsciidocSwingDemoCtrl {
     public void setNameFetcher(StringFetcher nameFetcher) {
         this.nameFetcher = nameFetcher;
     }
-    
+
     /**
      * Get name from the nameFetcher
      * 
@@ -46,5 +50,20 @@ public class AsciidocSwingDemoCtrl {
         String name = nameFetcher.fetch();
         if (name == null || "".equals(name.trim())) { return DEFAULT_NAME; }
         return name.trim();
+    }
+
+    /**
+     * Open a document from resources.
+     *
+     * @param document the document name
+     */
+    private void openDocument(String document) {
+        try {
+            Desktop.getDesktop().open(new File(getClass().getResource(document).getFile()));
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            System.out.println("Unable to open document " + e.getMessage());
+        }
     }
 }
