@@ -8,7 +8,8 @@ public class AsciidocSwingDemoCtrl {
     private StringFetcher nameFetcher;
     
     private final static String DEFAULT_NAME = "Mysterious Stranger";
-    private final static String HELP_URL = "/hello.pdf";
+    private final static String HELP_URL = "hello.pdf";
+    private final static String DOC_URL = "./doc";
 
     /**
      * Controller Methods.
@@ -53,13 +54,15 @@ public class AsciidocSwingDemoCtrl {
     }
 
     /**
-     * Open a document from resources.
+     * Open a document from library.
      *
      * @param document the document name
      */
     private void openDocument(String document) {
         try {
-            Desktop.getDesktop().open(new File(getClass().getResource(document).getFile()));
+            Desktop.getDesktop().open(
+                    new File(DOC_URL + "/" + document)
+            );
         }
         catch(Exception e) {
             e.printStackTrace();
